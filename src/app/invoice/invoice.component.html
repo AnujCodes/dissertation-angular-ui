@@ -1,0 +1,16 @@
+<sap-crm-card title="Invoice">
+    <sap-crm-table>
+        <sap-crm-table-column name="{{ column.display }}" *ngFor="let column of invoiceColumns; let i = index">
+        </sap-crm-table-column>
+        <sap-crm-table-column name="Approve" stickRight="true">
+        </sap-crm-table-column>
+        <sap-crm-table-row *ngFor="let item of invoiceItems; let i= index ; index as _id">
+            <sap-crm-table-cell stickLeft="true" *ngFor="let column of invoiceColumns; let i= index">
+                {{ item[column.colKey] }}
+            </sap-crm-table-cell>
+            <sap-crm-table-cell stickleft="true">
+                <sap-crm-button kind="link" (click)="onApproveClicked(item)" text="Approve"></sap-crm-button>
+            </sap-crm-table-cell>
+        </sap-crm-table-row>
+    </sap-crm-table>
+</sap-crm-card>
