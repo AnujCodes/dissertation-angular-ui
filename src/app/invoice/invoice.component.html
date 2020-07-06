@@ -1,8 +1,8 @@
-<sap-crm-card title="Invoice">
+<sap-crm-card title="Reports">
     <sap-crm-table>
         <sap-crm-table-column name="{{ column.display }}" *ngFor="let column of invoiceColumns; let i = index">
         </sap-crm-table-column>
-        <sap-crm-table-column name="Approve" stickRight="true">
+        <sap-crm-table-column name="" stickRight="true">
         </sap-crm-table-column>
         <sap-crm-table-row *ngFor="let item of invoiceItems; let i= index ; index as _id">
             <sap-crm-table-cell stickLeft="true" *ngFor="let column of invoiceColumns; let i= index">

@@ -14,20 +14,15 @@ export class InvoiceComponent implements OnInit {
 
   ngOnInit(): void {
     this.invoiceColumns=this.invoiceService.getItemColumns()
-    // this.invoiceService.getInvoiceItems().subscribe((data)=>{
-    //   this.invoiceItems=data;
-    //   for(let i=0;i<this.invoiceItems.length;i++){
-    //     this.invoiceItems[i].timestamp 
-    //     = new Date(this.invoiceItems[i].timestamp).toLocaleString();
-    //     console.log(this.invoiceItems[i].timestamp);
-    //   }
-    // })
-    this.invoiceItems = this.invoiceService.getInvoiceItems()
+    this.invoiceService.getInvoiceItems().subscribe((data)=>{
+      this.invoiceItems=data;
+    })
   }
 
   onApproveClicked(invoiceItem){
     console.log("in onApproveClicked")
-    console.log(invoiceItem.documentId)
+    console.log(invoiceItem.id);
+    this.invoiceService.approveRequest(invoiceItem);
   }
 
 }

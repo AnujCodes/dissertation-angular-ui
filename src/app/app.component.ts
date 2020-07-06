@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'InvoiceApp';
+  title = 'Expense Reports';
   logoPath: any;
   ngOnInit(): void {
     this.logoPath = 'https://stage.cxm-salescloud.com/modules/shell/shell-ui/assets/sap-logo-svg.svg';

@@ -11,8 +11,9 @@ headers=new HttpHeaders({"Content-Type":"application/json",
                         "databaseId":"database1",
                         "databaseSchema":"customer_schema",
                         "userId":"i328444"});
-invoiceBaseURL:string="http://localhost:8082";
-getInvoiceURLPattern:string="/Invoice/GetAllActive";
+invoiceBaseURL:string="https://scp-innovision.cfapps.us10.hana.ondemand.com";
+getInvoiceURLPattern:string="/fetch/report";
+getInvoiceApprovalURLPattern:string="/approve/report";
 
 constructor() {}
 }
