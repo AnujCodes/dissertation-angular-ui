@@ -33,6 +33,6 @@ export class InvoiceService {
 
   approveRequest(data: any): Observable<any> {
     console.log(data);
-    return this.httpClient.post<any>(this.httpUtil.getInvoiceApprovalURLPattern, data.id);
-  }
+    return this.httpClient.post<any>(this.httpUtil.invoiceBaseURL+this.httpUtil.getInvoiceApprovalURLPattern+data.id,null);
+    }
 }

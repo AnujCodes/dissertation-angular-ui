@@ -22,7 +22,10 @@ export class InvoiceComponent implements OnInit {
   onApproveClicked(invoiceItem){
     console.log("in onApproveClicked")
     console.log(invoiceItem.id);
-    this.invoiceService.approveRequest(invoiceItem);
-  }
+    this.invoiceService.approveRequest(invoiceItem).subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+  )
+}
 
 }
